@@ -1,0 +1,19 @@
+<h1>Cats</h1>
+
+<table class="table">
+<tr>
+  <th>Name</th>
+</tr>
+
+<% @cats.sort.each do |cat| %>
+  <tr>
+  <td>
+    <%= link_to cat.name, cat %>
+    <br />
+    <%= link_to "Edit", edit_cat_path(cat) %>
+    <br />
+    <%= link_to "Delete", cat, method: :delete, data: {confirm: "Are you sure?"} %>
+  </td>
+  </tr>
+<% end %>
+</table>

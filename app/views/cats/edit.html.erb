@@ -1,0 +1,28 @@
+<h1>Edit Cats</h1>
+<%= @cat.id %>
+<form action="/cats/<%= @cat.id %>" method="post">
+
+    <label> Name </label>
+    <input type="text" name="cat[name]">
+    <br />
+    <label> Gender </label>
+    <input type="text" name="cat[gender]">
+    <br />
+
+    <label> Description </label>
+    <input type="text" name="cat[description]">
+
+    <br />
+    <label>Size</label>
+    <input type="text" name="cat[size]"> 
+    <br />
+
+    <label>Color</label>
+    <input type="text" name="cat[color]"> 
+    <br />
+
+    <label> DOB </label>
+    <input type="date" name="cat[birth_date]"> 
+
+    <input type="submit" value="Submit This Form">
+</form>
